@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org/dtd/xhtml1-strict-thymeleaf-spring4-4.dtd" >
+<head>
+    <meta charset="UTF-8">
+    <title>成功页面</title>
+</head>
+<body>
+成功了
+${hello}
+<h1><div th:text="${hello}">这里显示欢迎信息</div></h1>
+<h2><div th:text="${name}">   你好呀</div></h2>
+
+
+<h4  th:text="${user}" th:each="user:${users}"></h4>
+<hr/>
+<h4>
+    <span th:each="user:${users}">[[${user}]]</span>
+</h4>
+hahahahahahaaaadsa
+</body>
+</html>
