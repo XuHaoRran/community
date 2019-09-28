@@ -35,5 +35,8 @@ public class GithubUser {
         this.bio = bio;
     }
 
-
+    @Override
+    public String toString() {
+        return getName();
+    }
 }
