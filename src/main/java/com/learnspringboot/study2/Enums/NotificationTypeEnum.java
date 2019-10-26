@@ -1,24 +1,19 @@
 package com.learnspringboot.study2.Enums;
 
-public enum NotificationEnum {
+public enum NotificationTypeEnum {
     REPLY_QUESTION(1,"回复问题"),
     REPLY_COMMENT(2,"回复了评论")
     ;
 
-    private int status;
+    private int type;
     private String name;
 
-    NotificationEnum(int status, String name) {
-        this.status = status;
-        this.name = name;
+    public int getType() {
+        return type;
     }
 
-    public int getStatus() {
-        return status;
-    }
-
-    public void setStatus(int status) {
-        this.status = status;
+    public void setType(int type) {
+        this.type = type;
     }
 
     public String getName() {
@@ -26,6 +21,11 @@ public enum NotificationEnum {
     }
 
     public void setName(String name) {
+        this.name = name;
+    }
+
+    NotificationTypeEnum(int type, String name) {
+        this.type = type;
         this.name = name;
     }
 }

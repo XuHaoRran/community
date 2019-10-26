@@ -1,4 +1,6 @@
 package com.learnspringboot.study2.exception;
 
-public class ICustomizeErrorCode {
+public interface ICustomizeErrorCode {
+    String message = null;
+    String getMessage();
 }

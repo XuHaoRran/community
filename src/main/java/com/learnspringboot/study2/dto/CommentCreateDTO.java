@@ -1,6 +1,6 @@
 package com.learnspringboot.study2.dto;
 
-public class CommentDTO {
+public class CommentCreateDTO {
     private long id;
     private long parentId ;
     private  int type;

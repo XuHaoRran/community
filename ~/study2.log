@@ -1,0 +1,18 @@
+2019-10-26 16:24:24.283  INFO 8460 --- [main] c.l.study2.Study2Application             : Starting Study2Application on XHR with PID 8460 (D:\javaproject\study2\target\classes started by user in D:\javaproject\study2)
+2019-10-26 16:24:24.286  INFO 8460 --- [main] c.l.study2.Study2Application             : No active profile set, falling back to default profiles: default
+2019-10-26 16:24:25.340  INFO 8460 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8100 (http)
+2019-10-26 16:24:25.359  INFO 8460 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-10-26 16:24:25.360  INFO 8460 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.24]
+2019-10-26 16:24:25.497  INFO 8460 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-10-26 16:24:25.498  INFO 8460 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1160 ms
+2019-10-26 16:24:25.826  INFO 8460 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-10-26 16:24:25.881  INFO 8460 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2019-10-26 16:24:25.917  WARN 8460 --- [main] org.thymeleaf.templatemode.TemplateMode  : [THYMELEAF][main] Template Mode 'LEGACYHTML5' is deprecated. Using Template Mode 'HTML' instead.
+2019-10-26 16:24:26.042  INFO 8460 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8100 (http) with context path ''
+2019-10-26 16:24:26.045  INFO 8460 --- [main] c.l.study2.Study2Application             : Started Study2Application in 2.318 seconds (JVM running for 3.173)
+2019-10-26 16:24:34.921  INFO 8460 --- [http-nio-8100-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-10-26 16:24:34.922  INFO 8460 --- [http-nio-8100-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2019-10-26 16:24:34.930  INFO 8460 --- [http-nio-8100-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 8 ms
+2019-10-26 16:24:34.961  INFO 8460 --- [http-nio-8100-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2019-10-26 16:24:34.962  WARN 8460 --- [http-nio-8100-exec-1] com.zaxxer.hikari.util.DriverDataSource  : Registered driver with driverClassName=com.mysql.jdbc.Driver was not found, trying direct instantiation.
+2019-10-26 16:24:35.616  INFO 8460 --- [http-nio-8100-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.

@@ -16,3 +16,118 @@
 2019-10-26 16:26:49.559  INFO 2804 --- [http-nio-8100-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
 2019-10-26 16:26:49.560  WARN 2804 --- [http-nio-8100-exec-1] com.zaxxer.hikari.util.DriverDataSource  : Registered driver with driverClassName=com.mysql.jdbc.Driver was not found, trying direct instantiation.
 2019-10-26 16:26:50.337  INFO 2804 --- [http-nio-8100-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2019-10-26 16:29:43.453  INFO 8416 --- [main] c.l.study2.Study2Application             : Starting Study2Application on XHR with PID 8416 (D:\javaproject\study2\target\classes started by user in D:\javaproject\study2)
+2019-10-26 16:29:43.456  INFO 8416 --- [main] c.l.study2.Study2Application             : No active profile set, falling back to default profiles: default
+2019-10-26 16:29:44.677  INFO 8416 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8100 (http)
+2019-10-26 16:29:44.698  INFO 8416 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-10-26 16:29:44.700  INFO 8416 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.24]
+2019-10-26 16:29:44.802  INFO 8416 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-10-26 16:29:44.802  INFO 8416 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1307 ms
+2019-10-26 16:29:45.181  INFO 8416 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-10-26 16:29:45.246  INFO 8416 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2019-10-26 16:29:45.288  WARN 8416 --- [main] org.thymeleaf.templatemode.TemplateMode  : [THYMELEAF][main] Template Mode 'LEGACYHTML5' is deprecated. Using Template Mode 'HTML' instead.
+2019-10-26 16:29:45.439  INFO 8416 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8100 (http) with context path ''
+2019-10-26 16:29:45.442  INFO 8416 --- [main] c.l.study2.Study2Application             : Started Study2Application in 2.584 seconds (JVM running for 3.496)
+2019-10-26 16:29:49.528  INFO 8416 --- [http-nio-8100-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-10-26 16:29:49.529  INFO 8416 --- [http-nio-8100-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2019-10-26 16:29:49.534  INFO 8416 --- [http-nio-8100-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 5 ms
+2019-10-26 16:29:49.569  INFO 8416 --- [http-nio-8100-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2019-10-26 16:29:49.570  WARN 8416 --- [http-nio-8100-exec-1] com.zaxxer.hikari.util.DriverDataSource  : Registered driver with driverClassName=com.mysql.jdbc.Driver was not found, trying direct instantiation.
+2019-10-26 16:29:50.236  INFO 8416 --- [http-nio-8100-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2019-10-26 16:29:50.242 DEBUG 8416 --- [http-nio-8100-exec-1] c.l.s.mapper.UserMapper.findByToken      : ==>  Preparing: select * from user where token = ? 
+2019-10-26 16:29:50.275 DEBUG 8416 --- [http-nio-8100-exec-1] c.l.s.mapper.UserMapper.findByToken      : ==> Parameters: f65ac04d-74f8-4364-a973-65251b197507(String)
+2019-10-26 16:29:50.316 DEBUG 8416 --- [http-nio-8100-exec-1] c.l.s.mapper.UserMapper.findByToken      : <==      Total: 1
+2019-10-26 16:29:50.323 DEBUG 8416 --- [http-nio-8100-exec-1] c.l.s.mapper.NotificationMapper.count    : ==>  Preparing: select count(1) from public.notification where status = 0 and notifier = ? 
+2019-10-26 16:29:50.323 DEBUG 8416 --- [http-nio-8100-exec-1] c.l.s.mapper.NotificationMapper.count    : ==> Parameters: 35(Integer)
+2019-10-26 16:29:50.325 DEBUG 8416 --- [http-nio-8100-exec-1] c.l.s.mapper.NotificationMapper.count    : <==      Total: 1
+2019-10-26 16:29:50.368 DEBUG 8416 --- [http-nio-8100-exec-1] c.l.s.mapper.QuestionMapper.listById     : ==>  Preparing: select * from public.question where creator =? limit ?,? 
+2019-10-26 16:29:50.369 DEBUG 8416 --- [http-nio-8100-exec-1] c.l.s.mapper.QuestionMapper.listById     : ==> Parameters: 35(Integer), 0(Integer), 5(Integer)
+2019-10-26 16:29:50.374 DEBUG 8416 --- [http-nio-8100-exec-1] c.l.s.mapper.QuestionMapper.listById     : <==      Total: 1
+2019-10-26 16:29:50.375 DEBUG 8416 --- [http-nio-8100-exec-1] c.l.study2.mapper.UserMapper.findById    : ==>  Preparing: select * from public.user where id =? 
+2019-10-26 16:29:50.375 DEBUG 8416 --- [http-nio-8100-exec-1] c.l.study2.mapper.UserMapper.findById    : ==> Parameters: 35(Integer)
+2019-10-26 16:29:50.379 DEBUG 8416 --- [http-nio-8100-exec-1] c.l.study2.mapper.UserMapper.findById    : <==      Total: 1
+2019-10-26 16:29:50.385 DEBUG 8416 --- [http-nio-8100-exec-1] c.l.s.mapper.QuestionMapper.countById    : ==>  Preparing: select count(1) from public.question where creator=? 
+2019-10-26 16:29:50.386 DEBUG 8416 --- [http-nio-8100-exec-1] c.l.s.mapper.QuestionMapper.countById    : ==> Parameters: 35(Integer)
+2019-10-26 16:29:50.387 DEBUG 8416 --- [http-nio-8100-exec-1] c.l.s.mapper.QuestionMapper.countById    : <==      Total: 1
+2019-10-26 16:29:51.460 DEBUG 8416 --- [http-nio-8100-exec-2] c.l.s.mapper.UserMapper.findByToken      : ==>  Preparing: select * from user where token = ? 
+2019-10-26 16:29:51.460 DEBUG 8416 --- [http-nio-8100-exec-2] c.l.s.mapper.UserMapper.findByToken      : ==> Parameters: f65ac04d-74f8-4364-a973-65251b197507(String)
+2019-10-26 16:29:51.463 DEBUG 8416 --- [http-nio-8100-exec-2] c.l.s.mapper.UserMapper.findByToken      : <==      Total: 1
+2019-10-26 16:29:51.463 DEBUG 8416 --- [http-nio-8100-exec-2] c.l.s.mapper.NotificationMapper.count    : ==>  Preparing: select count(1) from public.notification where status = 0 and notifier = ? 
+2019-10-26 16:29:51.464 DEBUG 8416 --- [http-nio-8100-exec-2] c.l.s.mapper.NotificationMapper.count    : ==> Parameters: 35(Integer)
+2019-10-26 16:29:51.465 DEBUG 8416 --- [http-nio-8100-exec-2] c.l.s.mapper.NotificationMapper.count    : <==      Total: 1
+2019-10-26 16:29:51.496 DEBUG 8416 --- [http-nio-8100-exec-3] c.l.s.mapper.UserMapper.findByToken      : ==>  Preparing: select * from user where token = ? 
+2019-10-26 16:29:51.497 DEBUG 8416 --- [http-nio-8100-exec-3] c.l.s.mapper.UserMapper.findByToken      : ==> Parameters: f65ac04d-74f8-4364-a973-65251b197507(String)
+2019-10-26 16:29:51.499 DEBUG 8416 --- [http-nio-8100-exec-3] c.l.s.mapper.UserMapper.findByToken      : <==      Total: 1
+2019-10-26 16:29:51.500 DEBUG 8416 --- [http-nio-8100-exec-3] c.l.s.mapper.NotificationMapper.count    : ==>  Preparing: select count(1) from public.notification where status = 0 and notifier = ? 
+2019-10-26 16:29:51.501 DEBUG 8416 --- [http-nio-8100-exec-3] c.l.s.mapper.NotificationMapper.count    : ==> Parameters: 35(Integer)
+2019-10-26 16:29:51.503 DEBUG 8416 --- [http-nio-8100-exec-3] c.l.s.mapper.NotificationMapper.count    : <==      Total: 1
+2019-10-26 16:41:37.061  INFO 16140 --- [main] c.l.study2.Study2Application             : Starting Study2Application on XHR with PID 16140 (D:\javaproject\study2\target\classes started by user in D:\javaproject\study2)
+2019-10-26 16:41:37.063  INFO 16140 --- [main] c.l.study2.Study2Application             : No active profile set, falling back to default profiles: default
+2019-10-26 16:41:38.239  INFO 16140 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8100 (http)
+2019-10-26 16:41:38.256  INFO 16140 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-10-26 16:41:38.256  INFO 16140 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.24]
+2019-10-26 16:41:38.346  INFO 16140 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-10-26 16:41:38.346  INFO 16140 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1224 ms
+2019-10-26 16:41:38.683  INFO 16140 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-10-26 16:41:38.738  INFO 16140 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2019-10-26 16:41:38.775  WARN 16140 --- [main] org.thymeleaf.templatemode.TemplateMode  : [THYMELEAF][main] Template Mode 'LEGACYHTML5' is deprecated. Using Template Mode 'HTML' instead.
+2019-10-26 16:41:38.913  INFO 16140 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8100 (http) with context path ''
+2019-10-26 16:41:38.915  INFO 16140 --- [main] c.l.study2.Study2Application             : Started Study2Application in 2.257 seconds (JVM running for 3.204)
+2019-10-26 16:53:06.196  INFO 1144 --- [main] c.l.study2.Study2Application             : Starting Study2Application on XHR with PID 1144 (D:\javaproject\study2\target\classes started by user in D:\javaproject\study2)
+2019-10-26 16:53:06.224  INFO 1144 --- [main] c.l.study2.Study2Application             : No active profile set, falling back to default profiles: default
+2019-10-26 16:53:07.719  INFO 1144 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8100 (http)
+2019-10-26 16:53:07.744  INFO 1144 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-10-26 16:53:07.745  INFO 1144 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.24]
+2019-10-26 16:53:07.879  INFO 1144 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-10-26 16:53:07.879  INFO 1144 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1601 ms
+2019-10-26 16:53:08.467  INFO 1144 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-10-26 16:53:08.541  INFO 1144 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2019-10-26 16:53:08.583  WARN 1144 --- [main] org.thymeleaf.templatemode.TemplateMode  : [THYMELEAF][main] Template Mode 'LEGACYHTML5' is deprecated. Using Template Mode 'HTML' instead.
+2019-10-26 16:53:08.757  INFO 1144 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8100 (http) with context path ''
+2019-10-26 16:53:08.761  INFO 1144 --- [main] c.l.study2.Study2Application             : Started Study2Application in 2.978 seconds (JVM running for 4.042)
+2019-10-26 16:53:11.129  INFO 1144 --- [http-nio-8100-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-10-26 16:53:11.130  INFO 1144 --- [http-nio-8100-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2019-10-26 16:53:11.136  INFO 1144 --- [http-nio-8100-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 6 ms
+2019-10-26 16:53:11.173  INFO 1144 --- [http-nio-8100-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2019-10-26 16:53:11.175  WARN 1144 --- [http-nio-8100-exec-1] com.zaxxer.hikari.util.DriverDataSource  : Registered driver with driverClassName=com.mysql.jdbc.Driver was not found, trying direct instantiation.
+2019-10-26 16:53:11.881  INFO 1144 --- [http-nio-8100-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2019-10-26 16:53:11.887 DEBUG 1144 --- [http-nio-8100-exec-1] c.l.s.mapper.UserMapper.findByToken      : ==>  Preparing: select * from user where token = ? 
+2019-10-26 16:53:11.911 DEBUG 1144 --- [http-nio-8100-exec-1] c.l.s.mapper.UserMapper.findByToken      : ==> Parameters: f65ac04d-74f8-4364-a973-65251b197507(String)
+2019-10-26 16:53:11.929 DEBUG 1144 --- [http-nio-8100-exec-1] c.l.s.mapper.UserMapper.findByToken      : <==      Total: 1
+2019-10-26 16:53:11.935 DEBUG 1144 --- [http-nio-8100-exec-1] c.l.s.mapper.NotificationMapper.count    : ==>  Preparing: select count(1) from public.notification where status = 0 and notifier = ? 
+2019-10-26 16:53:11.936 DEBUG 1144 --- [http-nio-8100-exec-1] c.l.s.mapper.NotificationMapper.count    : ==> Parameters: 35(Integer)
+2019-10-26 16:53:11.938 DEBUG 1144 --- [http-nio-8100-exec-1] c.l.s.mapper.NotificationMapper.count    : <==      Total: 1
+2019-10-26 16:53:11.953  INFO 1144 --- [http-nio-8100-exec-1] c.l.study2.controller.HelloController    : 成功显示首页的了啊
+2019-10-26 16:53:11.953 DEBUG 1144 --- [http-nio-8100-exec-1] c.l.study2.mapper.QuestionMapper.list    : ==>  Preparing: select * from public.question limit ?,? 
+2019-10-26 16:53:11.954 DEBUG 1144 --- [http-nio-8100-exec-1] c.l.study2.mapper.QuestionMapper.list    : ==> Parameters: 0(Integer), 5(Integer)
+2019-10-26 16:53:11.959 DEBUG 1144 --- [http-nio-8100-exec-1] c.l.study2.mapper.QuestionMapper.list    : <==      Total: 5
+2019-10-26 16:53:11.960 DEBUG 1144 --- [http-nio-8100-exec-1] c.l.study2.mapper.UserMapper.findById    : ==>  Preparing: select * from public.user where id =? 
+2019-10-26 16:53:11.960 DEBUG 1144 --- [http-nio-8100-exec-1] c.l.study2.mapper.UserMapper.findById    : ==> Parameters: 3(Integer)
+2019-10-26 16:53:11.961 DEBUG 1144 --- [http-nio-8100-exec-1] c.l.study2.mapper.UserMapper.findById    : <==      Total: 1
+2019-10-26 16:53:11.967 DEBUG 1144 --- [http-nio-8100-exec-1] c.l.study2.mapper.UserMapper.findById    : ==>  Preparing: select * from public.user where id =? 
+2019-10-26 16:53:11.967 DEBUG 1144 --- [http-nio-8100-exec-1] c.l.study2.mapper.UserMapper.findById    : ==> Parameters: 9(Integer)
+2019-10-26 16:53:11.968 DEBUG 1144 --- [http-nio-8100-exec-1] c.l.study2.mapper.UserMapper.findById    : <==      Total: 0
+2019-10-26 16:53:11.969 DEBUG 1144 --- [http-nio-8100-exec-1] c.l.study2.mapper.UserMapper.findById    : ==>  Preparing: select * from public.user where id =? 
+2019-10-26 16:53:11.969 DEBUG 1144 --- [http-nio-8100-exec-1] c.l.study2.mapper.UserMapper.findById    : ==> Parameters: 9(Integer)
+2019-10-26 16:53:11.970 DEBUG 1144 --- [http-nio-8100-exec-1] c.l.study2.mapper.UserMapper.findById    : <==      Total: 0
+2019-10-26 16:53:11.971 DEBUG 1144 --- [http-nio-8100-exec-1] c.l.study2.mapper.UserMapper.findById    : ==>  Preparing: select * from public.user where id =? 
+2019-10-26 16:53:11.971 DEBUG 1144 --- [http-nio-8100-exec-1] c.l.study2.mapper.UserMapper.findById    : ==> Parameters: 9(Integer)
+2019-10-26 16:53:11.972 DEBUG 1144 --- [http-nio-8100-exec-1] c.l.study2.mapper.UserMapper.findById    : <==      Total: 0
+2019-10-26 16:53:11.973 DEBUG 1144 --- [http-nio-8100-exec-1] c.l.study2.mapper.UserMapper.findById    : ==>  Preparing: select * from public.user where id =? 
+2019-10-26 16:53:11.973 DEBUG 1144 --- [http-nio-8100-exec-1] c.l.study2.mapper.UserMapper.findById    : ==> Parameters: 9(Integer)
+2019-10-26 16:53:11.974 DEBUG 1144 --- [http-nio-8100-exec-1] c.l.study2.mapper.UserMapper.findById    : <==      Total: 0
+2019-10-26 16:53:11.975 DEBUG 1144 --- [http-nio-8100-exec-1] c.l.study2.mapper.QuestionMapper.count   : ==>  Preparing: select count(1) from public.question 
+2019-10-26 16:53:11.975 DEBUG 1144 --- [http-nio-8100-exec-1] c.l.study2.mapper.QuestionMapper.count   : ==> Parameters: 
+2019-10-26 16:53:11.981 DEBUG 1144 --- [http-nio-8100-exec-1] c.l.study2.mapper.QuestionMapper.count   : <==      Total: 1
+2019-10-26 16:53:12.356 DEBUG 1144 --- [http-nio-8100-exec-3] c.l.s.mapper.UserMapper.findByToken      : ==>  Preparing: select * from user where token = ? 
+2019-10-26 16:53:12.356 DEBUG 1144 --- [http-nio-8100-exec-2] c.l.s.mapper.UserMapper.findByToken      : ==>  Preparing: select * from user where token = ? 
+2019-10-26 16:53:12.357 DEBUG 1144 --- [http-nio-8100-exec-3] c.l.s.mapper.UserMapper.findByToken      : ==> Parameters: f65ac04d-74f8-4364-a973-65251b197507(String)
+2019-10-26 16:53:12.357 DEBUG 1144 --- [http-nio-8100-exec-2] c.l.s.mapper.UserMapper.findByToken      : ==> Parameters: f65ac04d-74f8-4364-a973-65251b197507(String)
+2019-10-26 16:53:12.359 DEBUG 1144 --- [http-nio-8100-exec-2] c.l.s.mapper.UserMapper.findByToken      : <==      Total: 1
+2019-10-26 16:53:12.359 DEBUG 1144 --- [http-nio-8100-exec-3] c.l.s.mapper.UserMapper.findByToken      : <==      Total: 1
+2019-10-26 16:53:12.360 DEBUG 1144 --- [http-nio-8100-exec-2] c.l.s.mapper.NotificationMapper.count    : ==>  Preparing: select count(1) from public.notification where status = 0 and notifier = ? 
+2019-10-26 16:53:12.360 DEBUG 1144 --- [http-nio-8100-exec-3] c.l.s.mapper.NotificationMapper.count    : ==>  Preparing: select count(1) from public.notification where status = 0 and notifier = ? 
+2019-10-26 16:53:12.360 DEBUG 1144 --- [http-nio-8100-exec-2] c.l.s.mapper.NotificationMapper.count    : ==> Parameters: 35(Integer)
+2019-10-26 16:53:12.360 DEBUG 1144 --- [http-nio-8100-exec-3] c.l.s.mapper.NotificationMapper.count    : ==> Parameters: 35(Integer)
+2019-10-26 16:53:12.362 DEBUG 1144 --- [http-nio-8100-exec-2] c.l.s.mapper.NotificationMapper.count    : <==      Total: 1
+2019-10-26 16:53:12.361 DEBUG 1144 --- [http-nio-8100-exec-3] c.l.s.mapper.NotificationMapper.count    : <==      Total: 1

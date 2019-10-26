@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>xhr的社区</title>
+
     <!-- 最新版本的 Bootstrap 核心 CSS 文件 -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 
@@ -11,45 +12,53 @@
     <script src="/js/jquery.min.js"></script>
     <!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="/css/community.css">
 </head>
 <body>
-<nav class="navbar navbar-default">
+    <div th:insert="~{navigation :: nav}"></div>
     <div class="container-fluid">
-        <!-- Brand and toggle get grouped for better mobile display -->
-        <div class="navbar-header">
-            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-                <span class="sr-only">xhr的社区</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-            </button>
-            <a class="navbar-brand" href="#">xhr的社区</a>
-        </div>
+        <div class="row">
+            <div class="col-lg-9 col-md-12 col-md-12 col-sm-12 col-xs-12">
+                <h2><span class="glyphicon glyphicon-list">发现</span></h2>
+                <hr>
+                <div class="media" th:each="question:${pageDTO.questions}">
+                    <div class="media-left"></div>
+                    <div class="media-body" >
+                        <a href="" th:href="@{'question/'+${question.id}}" style="text-decoration: none;outline: none;-moz-outline-style: none;-ms-outline-style: none;-webkit-outline-style: none;-o-outline-style: none;color: black">
+                            <h4 class="media-heading" th:text="${question.title}" ></h4>
+                            <span th:text="${question.description}"></span>
+                        </a>
+                            <br>
+                            <span class="text-desc"><span th:text="${question.commentCount}" ></span>回复 <span th:text="${question.viewCount}">0</span>评论 <span th:text="${question.gmtCreate}"></span></span>
 
-        <!-- Collect the nav links, forms, and other content for toggling -->
-        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-
-            <form class="navbar-form navbar-left">
-                <div class="form-group">
-                    <input type="text" class="form-control" placeholder="搜索话题">
+                    </div>
+                    <hr>
                 </div>
-                <button type="submit" class="btn btn-default">提交</button>
-            </form>
-            <ul class="nav navbar-nav navbar-right">
-                <li class="dropdown" th:if="${session.user!=null}">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" th:text="${session.user.getName()}"> <span class="caret"></span></a>
-                    <ul class="dropdown-menu" >
-                        <li><a href="#">消息中心</a></li>
-                        <li><a href="#">个人资料</a></li>
-                        <li><a href="#">推出登录</a></li>
-                        <li role="separator" class="divider"></li>
-                    </ul>
-                </li>
-                <li th:if="${session.user == null}"><a href="https://github.com/login/oauth/authorize?client_id=39cce7d9a15359c7f78a&redirect_url=http://localhost:8100/callback&scope=user&state=1">登录</a></li>
+                <nav aria-label="Page navigation">
+                    <ul class="pagination">
+                        <li th:if="${pageDTO.showPrevious}">
+                            <a href="/" th:href="@{/(page=${pageDTO.page-1})}" aria-label="Previous">
+                                <span aria-hidden="true">&laquo;</span>
+                            </a>
+                        </li>
+                        <li            th:each="page:${pageDTO.pages}"  th:class="${pageDTO.page == page}? 'active' : ''"   ><a href="/" th:href="@{/(page=${page})}"   th:text="${page}"></a></li>
 
-            </ul>
+                        <li th:if="${pageDTO.showNext}">
+                            <a href="#" th:href="@{/(page=${pageDTO.page+1})}" aria-label="Next">
+                                <span aria-hidden="true">&raquo;</span>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+
+            <div class="col-lg-3 col-md-12 col-md-12 col-sm-12 col-xs-12" >
+                <h3>热门话题</h3>
+                好好测试，好好玩耍吧~~~~~~~~~哈哈哈哈哈哈哈哈哈哈
+            </div>
         </div>
     </div>
-</nav>
+
+
 </body>
 </html>
